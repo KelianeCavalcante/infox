@@ -35,6 +35,10 @@ public class TelaLogin extends javax.swing.JFrame {
             if (rs.next()) {
                 TelaPrincipal principal = new TelaPrincipal();
                 principal.setVisible(true);
+                //linha que garante que o formulário feche após chamar o formulário da tela principal
+                this.dispose();
+                //fecha a conexão com BD
+                conexao.close();
             } else {
                 JOptionPane.showMessageDialog(null, "Usuário e/ou senha invalido(s)");
             }
