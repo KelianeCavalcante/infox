@@ -7,6 +7,7 @@ package br.com.infox.telas;
 
 import java.sql.*;
 import br.com.infox.dal.ModuloConexao;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 
 /**
@@ -33,10 +34,26 @@ public class TelaLogin extends javax.swing.JFrame {
             rs = pst.executeQuery();
             //se existir usuario e senha correspondente
             if (rs.next()) {
-                TelaPrincipal principal = new TelaPrincipal();
-                principal.setVisible(true);
-                //linha que garante que o formulário feche após chamar o formulário da tela principal
-                this.dispose();
+                //a linha abaixo obtem o conteúdo do campo perfil da tabela tbusuarios
+                String perfil = rs.getString(6);
+                //System.out.println(perfil);
+                //a estrutura abaixo faz o tratamento do perfil do usuário
+                if (perfil.equals("admin")) {
+                    TelaPrincipal principal = new TelaPrincipal();
+                    principal.setVisible(true);
+                    TelaPrincipal.MenRel.setEnabled(true);
+                    TelaPrincipal.MenCadUsu.setEnabled(true);
+                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
+                    TelaPrincipal.lblUsuario.setForeground(Color.red);
+                    //linha que garante que o formulário feche após chamar o formulário da tela principal
+                    this.dispose();
+                }else{
+                    TelaPrincipal principal = new TelaPrincipal();
+                    principal.setVisible(true);
+                    TelaPrincipal.lblUsuario.setText(rs.getString(2));
+                    //linha que garante que o formulário feche após chamar o formulário da tela principal
+                    this.dispose();
+                }
                 //fecha a conexão com BD
                 conexao.close();
             } else {
@@ -152,7 +169,7 @@ public class TelaLogin extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         //chamando o metodo logar
         logar();
-        
+
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**

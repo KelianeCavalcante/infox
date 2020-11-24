@@ -129,7 +129,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         MenRelSer.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.ALT_MASK));
         MenRelSer.setText("Serviços");
-        MenRelSer.setEnabled(false);
         MenRel.add(MenRelSer);
 
         Menu.add(MenRel);
@@ -176,9 +175,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                             .addComponent(lblData)
                             .addComponent(lblUsuario)))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(1, 1, 1)
                         .addComponent(jLabel1)))
-                .addContainerGap())
+                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -189,13 +188,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(56, 56, 56)
                 .addComponent(lblUsuario)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(53, 53, 53)
                 .addComponent(lblData)
-                .addGap(60, 60, 60)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1))
         );
 
-        setSize(new java.awt.Dimension(1087, 555));
+        setSize(new java.awt.Dimension(1075, 555));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -270,7 +269,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu MenOpc;
     private javax.swing.JMenuItem MenOpcSai;
     public static javax.swing.JMenu MenRel;
-    public static javax.swing.JMenuItem MenRelSer;
+    private javax.swing.JMenuItem MenRelSer;
     private javax.swing.JMenuBar Menu;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JDesktopPane jDesktopPane2;
@@ -279,7 +278,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar2;
     private javax.swing.JLabel lblData;
-    private javax.swing.JLabel lblUsuario;
+    public static javax.swing.JLabel lblUsuario;
     private javax.swing.JMenu menCad;
     // End of variables declaration//GEN-END:variables
 }
