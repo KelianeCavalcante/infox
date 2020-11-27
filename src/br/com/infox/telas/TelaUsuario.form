@@ -59,8 +59,8 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="txtUsoSenha" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
-                                  <Component id="txtUsoFone" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
+                                  <Component id="txtUsuSenha" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
+                                  <Component id="txtUsuFone" alignment="0" min="-2" pref="215" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
                           </Group>
@@ -73,8 +73,8 @@
                               </Group>
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="txtUsoLogin" min="-2" pref="225" max="-2" attributes="0"/>
-                                  <Component id="cboUsoPerfil" min="-2" pref="225" max="-2" attributes="0"/>
+                                  <Component id="txtUsuLogin" min="-2" pref="225" max="-2" attributes="0"/>
+                                  <Component id="cboUsuPerfil" min="-2" pref="225" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -86,7 +86,7 @@
                       </Group>
                   </Group>
                   <Component id="txtUsuId" min="-2" pref="67" max="-2" attributes="0"/>
-                  <Component id="txtUsoNome" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtUsuNome" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="73" max="32767" attributes="0"/>
           </Group>
@@ -105,23 +105,23 @@
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtUsoNome" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtUsuNome" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtUsoLogin" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtUsuLogin" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtUsoFone" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="txtUsuFone" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="txtUsoSenha" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="cboUsoPerfil" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtUsuSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="cboUsuPerfil" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel4" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
                           <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -175,16 +175,16 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsuIdActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtUsoNome">
+    <Component class="javax.swing.JTextField" name="txtUsuNome">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtUsoLogin">
+    <Component class="javax.swing.JTextField" name="txtUsuLogin">
     </Component>
-    <Component class="javax.swing.JTextField" name="txtUsoSenha">
+    <Component class="javax.swing.JTextField" name="txtUsuSenha">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsoSenhaActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsuSenhaActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cboUsoPerfil">
+    <Component class="javax.swing.JComboBox" name="cboUsuPerfil">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
@@ -202,9 +202,9 @@
         <Property name="text" type="java.lang.String" value="Fone"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="txtUsoFone">
+    <Component class="javax.swing.JTextField" name="txtUsuFone">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsoFoneActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtUsuFoneActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnUsuCreate">
@@ -234,6 +234,9 @@
           <Dimension value="[80, 80]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUsuReadActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnUsuUpdate">
       <Properties>
