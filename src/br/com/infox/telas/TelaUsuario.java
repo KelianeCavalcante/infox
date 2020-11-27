@@ -42,9 +42,11 @@ public class TelaUsuario extends javax.swing.JInternalFrame {
             rs = pst.executeQuery();
             //caso tenha usuário correspondente, será preenchido os campos do form 
             if (rs.next()) {
-                //na tbUsuarios ele vai pegar o 2 campo da tabela(usuario), correspondente ao nome
+                //na tbUsuarios ele vai trazer o 2 campo da tabela(usuario), correspondente ao nome
                 txtUsuNome.setText(rs.getString(2));
+                //3 campo da tabela(fone)
                 txtUsuFone.setText(rs.getString(3));
+                //4 campo da tabela(login) e etc
                 txtUsuLogin.setText(rs.getString(4));
                 txtUsuSenha.setText(rs.getString(5));
                 //a linha abaixo se refere ao combobox
