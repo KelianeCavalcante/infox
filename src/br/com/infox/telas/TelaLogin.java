@@ -26,7 +26,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     //criando metodo logar
     public void logar() {
-        
+
         //seleciono do BD o login e senha
         String sql = "select * from tbusuarios where login =? and senha =?";
         try {
