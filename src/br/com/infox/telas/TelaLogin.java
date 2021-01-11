@@ -26,7 +26,7 @@ public class TelaLogin extends javax.swing.JFrame {
 
     //criando metodo logar
     public void logar() {
-
+        
         //seleciono do BD o login e senha
         String sql = "select * from tbusuarios where login =? and senha =?";
         try {
@@ -77,6 +77,8 @@ public class TelaLogin extends javax.swing.JFrame {
      */
     public TelaLogin() {
         initComponents();
+        //apertar Enter(na Tela de Login) e entrar
+        getRootPane().setDefaultButton(btnLogin);
         //estabelecendo a conexão com o BD sempre neste ponto
         conexao = ModuloConexao.conector();
         //a linha abaixo serve de apoio ao status da conexão
