@@ -21,6 +21,9 @@
     <SyntheticProperty name="generatePosition" type="boolean" value="true"/>
     <SyntheticProperty name="generateSize" type="boolean" value="true"/>
   </SyntheticProperties>
+  <Events>
+    <EventHandler event="internalFrameOpened" listener="javax.swing.event.InternalFrameListener" parameters="javax.swing.event.InternalFrameEvent" handler="formInternalFrameOpened"/>
+  </Events>
   <AuxValues>
     <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
@@ -159,18 +162,11 @@
                       <Component id="txtOs" alignment="0" min="-2" pref="65" max="-2" attributes="0"/>
                       <Component id="rbtOrc" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                          <Component id="rbtOs" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtData" min="-2" pref="77" max="-2" attributes="0"/>
-                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
+                      <Component id="txtData" min="-2" pref="77" max="-2" attributes="0"/>
+                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="rbtOs" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="31" max="32767" attributes="0"/>
               </Group>
@@ -230,14 +226,20 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Or&#xe7;amento"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtOrcActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JRadioButton" name="rbtOs">
           <Properties>
             <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
               <ComponentRef name="buttonGroup1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Ordem de Servi&#xe7;o"/>
+            <Property name="text" type="java.lang.String" value="OS"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbtOsActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -249,13 +251,14 @@
     <Component class="javax.swing.JComboBox" name="cboOsSit">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="6">
-            <StringItem index="0" value="Entrega OK"/>
-            <StringItem index="1" value="Or&#xe7;amento REPROVADO"/>
-            <StringItem index="2" value="Aguardando pe&#xe7;as"/>
-            <StringItem index="3" value="Abandonado pelo cliente"/>
-            <StringItem index="4" value="Na bancada"/>
-            <StringItem index="5" value="Retornou"/>
+          <StringArray count="7">
+            <StringItem index="0" value="Na bancada"/>
+            <StringItem index="1" value="Entrega OK"/>
+            <StringItem index="2" value="Or&#xe7;amento REPROVADO"/>
+            <StringItem index="3" value="Aguardando APROVA&#xc7;&#xc3;O"/>
+            <StringItem index="4" value="Aguardando pe&#xe7;as"/>
+            <StringItem index="5" value="Abandonado pelo cliente"/>
+            <StringItem index="6" value="Retornou"/>
           </StringArray>
         </Property>
       </Properties>
@@ -371,6 +374,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOsDef">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtOsDefActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
@@ -392,13 +398,16 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtOsValor">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="0"/>
+      </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnOsAdicionar">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/br/com/infox/icones/create.png"/>
         </Property>
-        <Property name="toolTipText" type="java.lang.String" value="Adicionar"/>
+        <Property name="toolTipText" type="java.lang.String" value="Emitir OS"/>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor em Forma de M&#xe3;o"/>
         </Property>
@@ -406,6 +415,9 @@
           <Dimension value="[80, 80]"/>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOsAdicionarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnOsPesquisar">
       <Properties>
